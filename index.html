@@ -1,23 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css"><!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Victor Oduor</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><i class="fa fa-home"></i><a href="#">Home</a></li>
-                <li><i class="fa fa-info-circle"></i><a href="#">About</a></li>
-                <li><i class="fa fa-cogs"></i><a href="">Services</a></li>
-                <li><i class="fa fa-envelope"></i><a href="">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+
+  <header class="fade-in">
+    <div class="container">
+      <h1>Victor Oduor</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" class="slide-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi! I’m <strong>Victor oduor</strong>, a passionate web developer with a love for creating functional and beautiful web experiences.</p>
+      
+      <h3>🎓 Educational Background</h3>
+      <p>Am an undergraduate <strong>In Bachelors Degree</strong> from <strong>Technical University Of Mombasa</strong>.</p>
+      <a href="your-cv.pdf" class="btn" download>Download My CV</a>
+
+      <h3>💡 Interests</h3>
+      <ul class="interests">
+        <li><strong>Web Development:</strong> Exploring modern frameworks and best practices.</li>
+        <li><strong>Tech Innovations:</strong> Keeping up with emerging trends in technology.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="slide-up delay-1">
+    <div class="container">
+      <h2>🛠️ Projects</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>A brief description of your project.</p>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>Another brief description.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="slide-up delay-2">
+    <div class="container">
+      <h2>📬 Contact Me</h2>
+      <p>Feel free to reach out!</p>
+      <form action="#" method="post" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="fade-in delay-3">
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
