@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Orbitron', sans-serif;
   background: #0d0d0d;
@@ -27,12 +29,19 @@ header {
   padding: 20px 0;
   text-align: center;
   border-bottom: 2px solid #0ff;
+  position: relative;
 }
 
 header h1 {
   font-size: 2rem;
   color: #0ff;
   text-shadow: 0 0 10px #0ff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav {
@@ -60,7 +69,8 @@ section {
   box-shadow: 0 0 20px #0ff2;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: #0ff;
   margin-bottom: 10px;
   text-shadow: 0 0 5px #0ff;
@@ -151,13 +161,27 @@ footer {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in {
@@ -173,11 +197,17 @@ footer {
 .delay-1 {
   animation-delay: 0.5s;
 }
+
 .delay-2 {
   animation-delay: 1s;
 }
+
 .delay-3 {
   animation-delay: 1.5s;
+}
+
+.fa-bars {
+  display: none;
 }
 
 /* Mobile Styles */
@@ -188,5 +218,51 @@ footer {
 
   .project-list {
     flex-direction: column;
+  }
+
+  .header-container nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .fa-bars {
+    display: block;
+    color: #0ff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  .fa-bars:hover {
+    color: #fff;
+  }
+
+  .active {
+    display: flex;
+  }
+ .menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-wrapper:hover  nav {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    background: #111;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0ff;
+    z-index: 1;
+    flex-direction: column;
+    height: auto;
+    min-width:300px;
+    transition: all 0.3s ease;
   }
 }
