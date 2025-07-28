@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul {
+  list-style: none;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -22,6 +25,14 @@ body {
   margin: auto;
   padding: 20px 0;
 }
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Header */
 header {
@@ -30,6 +41,7 @@ header {
   text-align: center;
   border-bottom: 2px solid #0ff;
   position: relative;
+  z-index: 10;
 }
 
 header h1 {
@@ -41,7 +53,6 @@ header h1 {
 .header-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 nav {
@@ -68,14 +79,70 @@ section {
   background: #1a1a1a;
   box-shadow: 0 0 20px #0ff2;
 }
-
+.about-me {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+.about-me .left {
+  flex: 1;
+  text-align: left;
+  a{
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 2rem;
+    transform: translate(20px, 40px);
+    margin-top: 3.3rem
+  }
+  }
+  strong {
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+    font-size: 1.3rem;
+  }
+  a:hover {
+    color: #fff;
+    transform: translate(0, 0); 
+}
+.about-me .right {
+  flex: 1;
+  text-align: right;
+}
+.about-me .left a:hover {
+  color: #fff;
+  transform: translate(0, 0);
+}
+.about-me-details {
+  display: flex;
+  color: #ccc;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-me img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #0ff;
+  box-shadow: 0 0 10px #0ff;
+}
 h2,
 h3 {
   color: #0ff;
   margin-bottom: 10px;
   text-shadow: 0 0 5px #0ff;
 }
-
+ #projects h2{
+  text-align: center;
+  margin-bottom: 20px;
+ }
 ul.interests {
   margin-top: 10px;
   margin-left: 20px;
@@ -90,14 +157,34 @@ ul.interests {
 .project-card {
   flex: 1 1 45%;
   background: #111;
-  border: 1px solid #0ff;
+  box-shadow: 0 0 10px #0ff;
   border-radius: 8px;
   padding: 20px;
   transition: transform 0.3s ease;
 }
-
+.project-card img{
+  width:100%;
+  height:auto;
+  border-radius: 5px;
+}
 .project-card:hover {
   transform: scale(1.03);
+}
+.project-card h3 {
+  margin-bottom: 10px;
+}
+.project-card p {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+.project-card a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.project-card a:hover {
+  color: #fff;
 }
 
 .btn {
@@ -158,7 +245,39 @@ footer {
   border-top: 2px solid #0ff;
   margin-top: 20px;
 }
-
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+footer .social-links a  {
+  color: #0ff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+footer .social-links a:hover {
+  color: #fff;
+}
+footer .social-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+footer .social-links ul li {
+  display: inline;
+}
+footer .social-links ul li a {
+  color: #0ff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+footer .social-links ul li a:hover {
+  color: #fff;
+}
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -264,5 +383,10 @@ footer {
     height: auto;
     min-width:300px;
     transition: all 0.3s ease;
+  }
+  .about-me-details{
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
   }
 }
