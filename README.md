@@ -3,7 +3,7 @@
 A sleek, mobile-responsive, and futuristic portfolio built using **pure HTML and CSS**, designed to showcase your skills, projects, and contact info — with a glowing neon aesthetic and cool animations.
 
 # this website is hosted in netlfify
-visit [text](https://victoroduorke.netlify.app/)
+[view-live](https://victoroduorke.netlify.app/)
 ---
 
 ## 🌐 Live Demo
